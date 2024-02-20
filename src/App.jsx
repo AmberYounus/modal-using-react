@@ -25,6 +25,12 @@ function App() {
         </p>
         <button onClick={() => setCustomModalOpen(false)}>close</button>
       </customModal>
+      <dialogModal isOpen={dialogModalOpen}onClose={()=>setDialogModalOpen}>
+         <p>
+          This is<strong>CUSTOM</strong>Modal
+        </p>
+        <button onClick={() => setDialogModalOpen(false)}>close</button>
+      </dialogModal>
     </div>
   );
 }
