@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-import { DialogModal } from "./DialogModal";
-import { CustomModal } from "./CustomModal";
+import  DialogModal from "./DialogModal";
+import CustomModal from "./CustomModal";
 
 function App() {
   const [customModalOpen, setCustomModalOpen] = useState(false);
   const [dialogModalOpen, setDialogModalOpen] = useState(false);
 
   return (
-    <div className="App">
+    <>
+    <div className="">
       <button onClick={() => setCustomModalOpen(true)}>
         Show Custom Modal
       </button>
@@ -25,13 +26,14 @@ function App() {
         </p>
         <button onClick={() => setCustomModalOpen(false)}>close</button>
       </CustomModal>
-      <DialogModal isOpen={dialogModalOpen}onClose={()=>setDialogModalOpen}>
+      <DialogModal isOpen={dialogModalOpen} onClose={()=>setDialogModalOpen}>
          <p>
           This is<strong> CUSTOM</strong>Modal
         </p>
         <button onClick={() => setDialogModalOpen(false)}>close</button>
       </DialogModal>
     </div>
+    </>
   );
 }
 

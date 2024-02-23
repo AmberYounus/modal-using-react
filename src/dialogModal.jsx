@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 
-export function DialogModal(isOpen,onClose) {
+export default function DialogModal(isOpen,onClose,children) {
   const dialogRef = useRef(null);
 
   useEffect(() => {
@@ -24,6 +25,11 @@ export function DialogModal(isOpen,onClose) {
     return () => {
       dialog.removeEventListener("close", onClose);
     };
-    
+
   }, [onClose]);
+
+  return createPortal(
+    <dialog ref={dialogRef}>{children}</dialog>,
+    document.querySelector("modal-container")
+  )
 }
