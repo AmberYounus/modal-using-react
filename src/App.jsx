@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <div className="">
+    <div className="modal">
       <button onClick={() => setCustomModalOpen(true)}>
         Show Custom Modal
       </button>
