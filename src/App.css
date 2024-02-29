@@ -10,3 +10,8 @@
 .modal-overlay.show{
   display: block;
 }
+.modal-overlay{
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+}
