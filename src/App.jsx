@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {CustomModal} from "./CustomModal";
 import  {DialogModal} from "./DialogModal";
+import './App.css';
 
 function App() {
   const [customModalOpen, setCustomModalOpen] = useState(false);
